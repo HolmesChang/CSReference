@@ -1,0 +1,7 @@
+D:\Publication\CS Reference\IO_File_TXT\IO_File_TXT\IO_File_TXT\obj\Debug\IO_File_TXT.csproj.AssemblyReference.cache
+D:\Publication\CS Reference\IO_File_TXT\IO_File_TXT\IO_File_TXT\obj\Debug\IO_File_TXT.csproj.CoreCompileInputs.cache
+D:\Publication\CS Reference\IO_File_TXT\IO_File_TXT\IO_File_TXT\bin\Debug\IO_File_TXT.exe.config
+D:\Publication\CS Reference\IO_File_TXT\IO_File_TXT\IO_File_TXT\bin\Debug\IO_File_TXT.exe
+D:\Publication\CS Reference\IO_File_TXT\IO_File_TXT\IO_File_TXT\bin\Debug\IO_File_TXT.pdb
+D:\Publication\CS Reference\IO_File_TXT\IO_File_TXT\IO_File_TXT\obj\Debug\IO_File_TXT.exe
+D:\Publication\CS Reference\IO_File_TXT\IO_File_TXT\IO_File_TXT\obj\Debug\IO_File_TXT.pdb
