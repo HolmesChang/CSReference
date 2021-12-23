@@ -1,0 +1,7 @@
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\bin\Debug\Minimum.exe.config
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\bin\Debug\Minimum.exe
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\bin\Debug\Minimum.pdb
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum.csproj.AssemblyReference.cache
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum.csproj.CoreCompileInputs.cache
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum.exe
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum.pdb
