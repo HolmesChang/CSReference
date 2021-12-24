@@ -1,0 +1,7 @@
+D:\Publication\CS Reference\Minimum_GUI_WinForm\Minimum_GUI_WinForm\bin\x86\Debug\Minimum_GUI_WinForm.exe.config
+D:\Publication\CS Reference\Minimum_GUI_WinForm\Minimum_GUI_WinForm\bin\x86\Debug\Minimum_GUI_WinForm.exe
+D:\Publication\CS Reference\Minimum_GUI_WinForm\Minimum_GUI_WinForm\bin\x86\Debug\Minimum_GUI_WinForm.pdb
+D:\Publication\CS Reference\Minimum_GUI_WinForm\Minimum_GUI_WinForm\obj\x86\Debug\Minimum_GUI_WinForm.csproj.AssemblyReference.cache
+D:\Publication\CS Reference\Minimum_GUI_WinForm\Minimum_GUI_WinForm\obj\x86\Debug\Minimum_GUI_WinForm.csproj.CoreCompileInputs.cache
+D:\Publication\CS Reference\Minimum_GUI_WinForm\Minimum_GUI_WinForm\obj\x86\Debug\Minimum_GUI_WinForm.exe
+D:\Publication\CS Reference\Minimum_GUI_WinForm\Minimum_GUI_WinForm\obj\x86\Debug\Minimum_GUI_WinForm.pdb
