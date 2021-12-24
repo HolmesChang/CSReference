@@ -1,0 +1,7 @@
+D:\Publication\CS Reference\GUI_WinForm_Button\GUI_WinForm_Button\bin\x86\Debug\GUI_WinForm_Button.exe.config
+D:\Publication\CS Reference\GUI_WinForm_Button\GUI_WinForm_Button\bin\x86\Debug\GUI_WinForm_Button.exe
+D:\Publication\CS Reference\GUI_WinForm_Button\GUI_WinForm_Button\bin\x86\Debug\GUI_WinForm_Button.pdb
+D:\Publication\CS Reference\GUI_WinForm_Button\GUI_WinForm_Button\obj\x86\Debug\GUI_WinForm_Button.csproj.AssemblyReference.cache
+D:\Publication\CS Reference\GUI_WinForm_Button\GUI_WinForm_Button\obj\x86\Debug\GUI_WinForm_Button.csproj.CoreCompileInputs.cache
+D:\Publication\CS Reference\GUI_WinForm_Button\GUI_WinForm_Button\obj\x86\Debug\GUI_WinForm_Button.exe
+D:\Publication\CS Reference\GUI_WinForm_Button\GUI_WinForm_Button\obj\x86\Debug\GUI_WinForm_Button.pdb
