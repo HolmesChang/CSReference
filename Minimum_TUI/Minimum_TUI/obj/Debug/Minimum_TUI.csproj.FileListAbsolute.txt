@@ -1,0 +1,15 @@
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\bin\Debug\Minimum.exe.config
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\bin\Debug\Minimum.exe
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\bin\Debug\Minimum.pdb
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum_TUI.csproj.AssemblyReference.cache
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum_TUI.csproj.SuggestedBindingRedirects.cache
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum_TUI.csproj.CoreCompileInputs.cache
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum.exe
+D:\Publication\CS Reference\Minimum\Minimum\Minimum\obj\Debug\Minimum.pdb
+D:\Publication\CS Reference\Minimum_TUI\Minimum_TUI\Minimum_TUI\bin\Debug\Minimum_TUI.exe.config
+D:\Publication\CS Reference\Minimum_TUI\Minimum_TUI\Minimum_TUI\bin\Debug\Minimum_TUI.exe
+D:\Publication\CS Reference\Minimum_TUI\Minimum_TUI\Minimum_TUI\bin\Debug\Minimum_TUI.pdb
+D:\Publication\CS Reference\Minimum_TUI\Minimum_TUI\Minimum_TUI\obj\Debug\Minimum_TUI.csproj.AssemblyReference.cache
+D:\Publication\CS Reference\Minimum_TUI\Minimum_TUI\Minimum_TUI\obj\Debug\Minimum_TUI.csproj.CoreCompileInputs.cache
+D:\Publication\CS Reference\Minimum_TUI\Minimum_TUI\Minimum_TUI\obj\Debug\Minimum_TUI.exe
+D:\Publication\CS Reference\Minimum_TUI\Minimum_TUI\Minimum_TUI\obj\Debug\Minimum_TUI.pdb
