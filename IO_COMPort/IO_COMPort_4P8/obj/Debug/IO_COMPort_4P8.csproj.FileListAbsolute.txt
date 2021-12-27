@@ -1,0 +1,10 @@
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\bin\Debug\IO_COMPort_4P8.exe.config
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\bin\Debug\IO_COMPort_4P8.exe
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\bin\Debug\IO_COMPort_4P8.pdb
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\bin\Debug\System.IO.Ports.dll
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\bin\Debug\System.IO.Ports.xml
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\obj\Debug\IO_COMPort_4P8.csprojAssemblyReference.cache
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\obj\Debug\IO_COMPort_4P8.csproj.CoreCompileInputs.cache
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\obj\Debug\IO_COMPort_4P8.csproj.CopyComplete
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\obj\Debug\IO_COMPort_4P8.exe
+D:\CS Reference\IO_COMPort\IO_COMPort_4P8\obj\Debug\IO_COMPort_4P8.pdb

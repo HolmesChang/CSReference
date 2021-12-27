@@ -1,0 +1,7 @@
+D:\CS Reference\IO_COMPort\IO_COMPort\bin\Debug\IO_COMPort.exe.config
+D:\CS Reference\IO_COMPort\IO_COMPort\bin\Debug\IO_COMPort.exe
+D:\CS Reference\IO_COMPort\IO_COMPort\bin\Debug\IO_COMPort.pdb
+D:\CS Reference\IO_COMPort\IO_COMPort\obj\Debug\IO_COMPort.csprojAssemblyReference.cache
+D:\CS Reference\IO_COMPort\IO_COMPort\obj\Debug\IO_COMPort.csproj.CoreCompileInputs.cache
+D:\CS Reference\IO_COMPort\IO_COMPort\obj\Debug\IO_COMPort.exe
+D:\CS Reference\IO_COMPort\IO_COMPort\obj\Debug\IO_COMPort.pdb
