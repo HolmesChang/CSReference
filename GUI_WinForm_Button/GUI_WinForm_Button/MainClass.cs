@@ -10,14 +10,15 @@ namespace GUI_WinForm_Button
         private System.Windows.Forms.Button blue;
         private System.Windows.Forms.Button green;
 
-        public MainClass() : base()
+        public MainClass() : base()         // Initialization Base Class Using base()
         {
             this.InitializeComponent();
         }
 
         protected override void Dispose(bool disposing)
         {
-            base.Dispose(disposing);
+            base.Dispose(disposing);        // Freeing Uncontrollable Resource Using base.Dispose(bool disposing)
+                                            // From Source Code, It Is Likely A CallingBack By Main Application Program
         }
 
         // InitializeComponent is a helper method for the constructor.
