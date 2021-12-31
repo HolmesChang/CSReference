@@ -1,0 +1,9 @@
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\bin\Debug\IO_File_JSON.exe.config
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\bin\Debug\IO_File_JSON.exe
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\bin\Debug\IO_File_JSON.pdb
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\bin\Debug\Newtonsoft.Json.dll
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\obj\Debug\IO_File_JSON.csprojAssemblyReference.cache
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\obj\Debug\IO_File_JSON.csproj.CoreCompileInputs.cache
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\obj\Debug\IO_File_JSON.csproj.CopyComplete
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\obj\Debug\IO_File_JSON.exe
+D:\Publication\HolmesChang\CS Reference\IO_File_JSON\IO_File_JSON\obj\Debug\IO_File_JSON.pdb
