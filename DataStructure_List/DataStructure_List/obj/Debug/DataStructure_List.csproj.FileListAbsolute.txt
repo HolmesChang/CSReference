@@ -5,3 +5,10 @@ D:\Publication\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\Data
 D:\Publication\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.csproj.CoreCompileInputs.cache
 D:\Publication\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.exe
 D:\Publication\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.pdb
+D:\CS Reference\DataStructure_List\DataStructure_List\bin\Debug\DataStructure_List.exe.config
+D:\CS Reference\DataStructure_List\DataStructure_List\bin\Debug\DataStructure_List.exe
+D:\CS Reference\DataStructure_List\DataStructure_List\bin\Debug\DataStructure_List.pdb
+D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.csprojAssemblyReference.cache
+D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.csproj.CoreCompileInputs.cache
+D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.exe
+D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.pdb
