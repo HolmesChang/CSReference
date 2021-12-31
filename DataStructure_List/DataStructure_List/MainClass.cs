@@ -12,12 +12,12 @@ namespace DataStructure_List
             // ================================================== //
             //  Declaration AND Initialization Of 1D List
             // ================================================== //
-            System.Collections.Generic.List<System.Int32> ListInt32 = new List<System.Int32>();
+            System.Collections.Generic.List<System.Int32> ListInt32 = new List<Int32>();
 
             // ================================================== //
             //  Push Element To Back
             // ================================================== //
-            for (Int32 i=0; i<10; i++)
+            for (Int32 i=0; i<30; i++)
             {
                 ListInt32.Add(i);
             }
@@ -26,10 +26,11 @@ namespace DataStructure_List
             //  Indexing
             // ================================================== //
             Console.WriteLine("\n\n\nIndexing\n\n\n");
-            for (Int32 i = 0; i < 10; i++)
+            for (Int32 i = 0; i < 30; i++)
             {
-                // Solution Of Printing Number W/I Zero Padding
-                Console.WriteLine("{0, -5} Element = {1, 5}", i.ToString("D"), ListInt32[i].ToString("D"));
+                Console.WriteLine("{0:00} Element = {1:00}", i, ListInt32[i]);          // Displaying Number W/I Leading Zero
+                Console.WriteLine("{0, -5} Element = {1, 5}", i.ToString("D2"), ListInt32[i].ToString("D2"));           // Displaying Number W/I Leading Zero AND Determining Number Of Space AND Alignment
+                Console.WriteLine("{0, -5:X2} Element = {1, 5:X2}", i, ListInt32[i]);   // Displaying Number W/I Leading Zero AND Specific Number Format AND Number Of Space AND Alignment
             }
 
             // ================================================== //

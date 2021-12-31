@@ -12,3 +12,10 @@ D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_Li
 D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.csproj.CoreCompileInputs.cache
 D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.exe
 D:\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.pdb
+D:\Publication\HolmesChang\CS Reference\DataStructure_List\DataStructure_List\bin\Debug\DataStructure_List.exe.config
+D:\Publication\HolmesChang\CS Reference\DataStructure_List\DataStructure_List\bin\Debug\DataStructure_List.exe
+D:\Publication\HolmesChang\CS Reference\DataStructure_List\DataStructure_List\bin\Debug\DataStructure_List.pdb
+D:\Publication\HolmesChang\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.csprojAssemblyReference.cache
+D:\Publication\HolmesChang\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.csproj.CoreCompileInputs.cache
+D:\Publication\HolmesChang\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.exe
+D:\Publication\HolmesChang\CS Reference\DataStructure_List\DataStructure_List\obj\Debug\DataStructure_List.pdb
