@@ -1,7 +1,8 @@
 {
+    "ModelName": "PA1013A",
+    "PartNumber": "FL11283",
     "fpath_RegTable": "PA1013A.csv",
     "RegAddrBitWidth": 8,
     "RegParamBitWidth": 8,
-    "RegTable": '{{"B0", "B1", "B2"},
-                  {"B3", "B4", "B5"}}'
+    "RegTable": 
 }

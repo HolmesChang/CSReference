@@ -2,100 +2,116 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Drawing;
+using Newtonsoft.Json;
 
 namespace GUI_WinForm_SelfDevelopmentComponent_Register
 {
     class Register_DDI : System.Windows.Forms.TabControl
     {
+        private Int32 RegAddrBitWidth = 8;
         private Int32 RegParamBitWidth = 8;
 
-        private System.String [] ListRegTable = {"B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "BA",
+        private String [] StringArrayRegTable = {"B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "BA",
                                                  "BB", "BC", "BD", "BE", "BF", "C0", "C6", "C7", "C8", "CC", "E0", "E9",
                                                  "EA"};
 
-        public List<TabPage> ListTabPage = new List<TabPage>();
+        public System.Collections.Generic.List<TabPage> ListTabPage = new List<TabPage>();
         public List<TableLayoutPanel> ListTLP = new List<TableLayoutPanel>();
         public List<Button> ListButton = new List<Button>();
         public List<TextBox> ListTextBox = new List<TextBox>();
 
         public Register_DDI (System.String fpath)
         {
-            // Parsing Register File
-            var reader = new System.IO.StreamReader(System.IO.File.OpenRead(fpath));            // Exception Handling Necessity
-            System.Collections.Generic.List<System.Collections.Generic.List<string>> ListReg = new System.Collections.Generic.List<System.Collections.Generic.List<string>>();
-            while (!reader.EndOfStream)
-            {
-                var line = reader.ReadLine();
-                var values = line.Split(',');
+            // ================================================== //
+            //  Parsing UserConfig.json
+            // ================================================== //
+            String jsonTEMP = System.IO.File.ReadAllText(fpath);
+            var dictUserConfig = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonTEMP);
+            this.RegAddrBitWidth = Int32.Parse(dictUserConfig["RegAddrBitWidth"]);
+            this.RegParamBitWidth = Int32.Parse(dictUserConfig["RegParamBitWidth"]);
 
-                System.Collections.Generic.List<string> tmp = new System.Collections.Generic.List<string>();
-                foreach (string ele in values)
+            // ================================================== //
+            //  Parsing DDI Register Table EXCEL File Into List
+            // ================================================== //
+            var ReaderFile = new System.IO.StreamReader(System.IO.File.OpenRead(dictUserConfig["fpath_RegTable"]));            // Exception Handling Necessity
+            List<List<string>> ListRegTable = new List<List<string>>();
+            while (!ReaderFile.EndOfStream)
+            {
+                var Line = ReaderFile.ReadLine();
+                var Tokens = Line.Split(',');
+
+                List<string> Tmp = new List<string>();
+                foreach (string Token in Tokens)
                 {
-                    if (ele.Replace(" ", "") == "")
-                        tmp.Add("-");
+                    if (Token.Replace(" ", "") == "")
+                        Tmp.Add("-");
                     else
-                        tmp.Add(ele);
+                        Tmp.Add(Token);
                 }
-                ListReg.Add(tmp);
+                ListRegTable.Add(Tmp);
             }
 
-            var ListRegDict = new System.Collections.Generic.List<System.Collections.Generic.Dictionary<System.String, System.Object>>();
-            var ListRegDictElement = new System.Collections.Generic.Dictionary<System.String, System.Object>();
-            var reg_param_descr = new System.Collections.Generic.List<System.Collections.Generic.List<System.String>>();
-            var reg_param_default = new System.Collections.Generic.List<System.String>();
+            // ================================================== //
+            //  Parsing ListRegTable Into ListRegDict
+            // ================================================== //
+            var ListRegDict = new List<System.Collections.Generic.Dictionary<System.String, System.Object>>();
+            var ListRegDictElement = new Dictionary<String, Object>();
+            var reg_param_descr = new List<List<String>>();
+            var reg_param_default = new List<String>();
             System.Boolean PushRegParam = false;
-            foreach (var row in ListReg)
+            foreach (var row in ListRegTable)
             {
-                if ((!PushRegParam) && System.Array.Exists(ListRegTable, ele => ele == row[0].Trim()))
+                if ((!PushRegParam) &&
+                    System.Array.Exists(StringArrayRegTable, ele => ele == row[0].Trim()))
                 {
-                    // Debugging
-                    System.Console.WriteLine(row[0]);
-
                     PushRegParam = true;
-                    ListRegDictElement.Add("RegAddr", row[0]);
-                    ListRegDictElement.Add("RegAddrNmonic", row[1]);
+                    ListRegDictElement.Add("RegAddr", row[0].Trim());
+                    ListRegDictElement.Add("RegAddrNmonic", row[1].Trim());
                     ListRegDictElement.Add("RegParamCnt", 0);
                     continue;
                 }
                 if (PushRegParam)
                 {
-                    if (!System.Array.Exists(ListRegTable, ele => ele == row[0].Trim()))
+                    if (Int32.TryParse(row[1].Trim(), out _))
                     {
-                        if (Int32.TryParse(row[1].Trim(), out _))
-                        {
-                            ListRegDictElement["RegParamCnt"] = ((int)ListRegDictElement["RegParamCnt"]) + 1;
-                            reg_param_descr.Add(row.GetRange(2, row.Count - 2));
-                            reg_param_default.Add(row[row.Count - 1]);
-                        }
-                        else
-                        {
-                            break;
-                        }
-                            
+                        ListRegDictElement["RegParamCnt"] = ((int)ListRegDictElement["RegParamCnt"]) + 1;
+                        reg_param_descr.Add(row.GetRange(2, row.Count - 2));
+                        reg_param_default.Add(row[row.Count - 1]);
                     }
                     else
                     {
                         ListRegDictElement.Add("RegParamDescr", new List<List<String>>(reg_param_descr));
                         ListRegDictElement.Add("RegParamDefault", new List<String>(reg_param_default));
-                        ListRegDict.Add(new System.Collections.Generic.Dictionary<System.String, System.Object>(ListRegDictElement));
-
-                        // Debugging
-                        System.Console.WriteLine(row[0]);
+                        ListRegDict.Add(new Dictionary<System.String, System.Object>(ListRegDictElement));
 
                         ListRegDictElement.Clear();
                         reg_param_descr.Clear();
                         reg_param_default.Clear();
-                        PushRegParam = true;
-                        ListRegDictElement.Add("RegAddr", row[0]);
-                        ListRegDictElement.Add("RegAddrNmonic", row[1]);
-                        ListRegDictElement.Add("RegParamCnt", 0);
+                        if (System.Array.Exists(StringArrayRegTable, ele => ele == row[0].Trim()))
+                        {
+                            PushRegParam = true;
+                            ListRegDictElement.Add("RegAddr", row[0].Trim());
+                            ListRegDictElement.Add("RegAddrNmonic", row[1].Trim());
+                            ListRegDictElement.Add("RegParamCnt", 0);
+                            continue;
+                        }
+                        else
+                        {
+                            PushRegParam = false;
+                            continue;
+                        }
                     }
                 }
             }
-            ListRegDictElement.Add("RegParamDescr", new List<List<String>>(reg_param_descr));
-            ListRegDictElement.Add("RegParamDefault", new List<String>(reg_param_default));
-            ListRegDict.Add(new System.Collections.Generic.Dictionary<System.String, System.Object>(ListRegDictElement));
+            if (PushRegParam)
+            {
+                ListRegDictElement.Add("RegParamDescr", new List<List<String>>(reg_param_descr));
+                ListRegDictElement.Add("RegParamDefault", new List<String>(reg_param_default));
+                ListRegDict.Add(new Dictionary<System.String, System.Object>(ListRegDictElement));
+            }
+
             // Debugging
+            /*
             System.Console.WriteLine(ListRegDict.Count + " Register");
             foreach (var RegDict in ListRegDict)
             {
@@ -116,8 +132,9 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
                     Console.WriteLine(ele);
                 }
             }
+            */
             // Debugging
-            // Parsing Register File
+            // Parsing ListRegTable Into ListRegDict
 
             // Forward Struction Of GUI Component Using Result Of Parsing Register File
             foreach (var RegDict in ListRegDict)
@@ -137,9 +154,14 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
                     //tlpTEMP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 1.0F/tlpTEMP.RowCount));
                     tlpTEMP.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30));
                 }
-                tlpTEMP.ColumnCount = RegParamBitWidth;
+                tlpTEMP.ColumnCount = RegParamBitWidth + 1;
                 for (Int32 i=0; i<tlpTEMP.ColumnCount; i++)
                 {
+                    if (i == 0)
+                    {
+                        tlpTEMP.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 30));
+                        continue;
+                    }
                     tlpTEMP.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.0F/tlpTEMP.ColumnCount));
                 }
                 //tlpTEMP.BorderStyle = BorderStyle.Fixed3D;
@@ -155,7 +177,7 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
                 btnRD.Dock = DockStyle.Fill;
                 btnRD.Font = new System.Drawing.Font("PMingLiU", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
                 btnRD.Click += BtnRDWR_LeftClicking;
-                tlpTEMP.Controls.Add(btnRD, 0, 0);
+                tlpTEMP.Controls.Add(btnRD, 1, 0);
                 tlpTEMP.SetColumnSpan(btnRD, 1);
                 ListButton.Add(btnRD);
 
@@ -165,19 +187,19 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
                 btnWR.Dock = DockStyle.Fill;
                 btnWR.Font = new System.Drawing.Font("PMingLiU", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
                 btnWR.Click += BtnRDWR_LeftClicking;
-                tlpTEMP.Controls.Add(btnWR, 1, 0);          // 2nd Parameter = Column. 3rd Parameter = Row.
+                tlpTEMP.Controls.Add(btnWR, 2, 0);          // 2nd Parameter = Column. 3rd Parameter = Row.
                 tlpTEMP.SetColumnSpan(btnWR, 1);
                 ListButton.Add(btnWR);
 
                 Int32 row, col;
                 row = 1;
-                col = 0;
+                col = 1;
                 foreach (var ListRegParamDescr in ((List<List<String>>)RegDict["RegParamDescr"]))
                 {
-                    col = 0;
+                    col = 1;
                     foreach (var Descr in ListRegParamDescr)
                     {
-                        if (col == 8)
+                        if (col == 9)
                             break;
 
                         Label lblTEMP = new Label();
@@ -195,14 +217,17 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
                 row = 2;
                 foreach (var RegParamDefault in ((List<String>)RegDict["RegParamDefault"]))
                 {
-                    for(Int32 j=0; j<RegParamBitWidth; j++)
+                    Label lblTEMP = new Label();
+                    lblTEMP.Text = String.Format("{0:00}", ((Int32)(row / 2)));
+                    tlpTEMP.Controls.Add(lblTEMP, 0, row);
+                    for (Int32 j=0; j<RegParamBitWidth; j++)
                     {
                         TextBox tbTEMP = new TextBox();
                         tbTEMP.Name = "TextBox_" + (String)RegDict["RegAddr"] + "h_{row}_{j}";
                         tbTEMP.TextAlign = HorizontalAlignment.Center;
                         tbTEMP.Dock = DockStyle.Fill;
                         tbTEMP.Font = new System.Drawing.Font("PMingLiU", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-                        if (RegParamDefault.Trim() != "-")
+                        if ((RegParamDefault.Trim() != "-") && (RegParamDefault.Trim() != "N/A"))
                             //if (Int32.TryParse(RegParamDefault.Trim().Substring(2, 2), out _))
                             if (Uri.IsHexDigit(RegParamDefault.Trim()[2]) && Uri.IsHexDigit(RegParamDefault.Trim()[3]))
                                 tbTEMP.Text = ((Int32.Parse(RegParamDefault.Trim().Substring(2, 2), System.Globalization.NumberStyles.HexNumber) >> (7-j)) & 0x1).ToString();
@@ -211,7 +236,7 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
                         tbTEMP.KeyPress += TB_KeyPress;
                         tbTEMP.DoubleClick += TB_DoubleClick;
                         ListTextBox.Add(tbTEMP);
-                        tlpTEMP.Controls.Add(tbTEMP, j, row);
+                        tlpTEMP.Controls.Add(tbTEMP, j+1, row);
                     }
                     row += 2;
                 }
@@ -268,10 +293,12 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
 
         void TB_DoubleClick (object sender, EventArgs e)
         {
-            UInt32 tmp = Convert.ToUInt32(((TextBox)sender).Text);
-            if (tmp == 0)
+            String tmp = "";
+            if (Int32.TryParse(((TextBox)sender).Text, out _))
+                tmp = ((TextBox)sender).Text;
+            if (tmp == "0")
                 ((TextBox)sender).Text = "1";
-            else
+            if (tmp == "1")
                 ((TextBox)sender).Text = "0";
         }
     }

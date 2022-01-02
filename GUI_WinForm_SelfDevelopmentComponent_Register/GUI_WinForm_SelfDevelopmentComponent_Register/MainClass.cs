@@ -7,8 +7,10 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
 {
     class MainClass : System.Windows.Forms.Form
     {
-        private const string fpath = @"D:\Publication\CS Reference\GUI_WinForm_SelfDevelopmentComponent_Register\PA1013A.csv";
-        private Register_DDI Register_DDI_PA1013 = new Register_DDI(fpath);
+        //private const string fpath = @"D:\Publication\HolmesChang\CS Reference\GUI_WinForm_SelfDevelopmentComponent_Register\PA1013A.csv";
+        //private const string fpath = @"PA1013A.csv";
+        private const string fpath_UserConfig = @"UserConfig.json";
+        private Register_DDI Register_DDI_PA1013 = new Register_DDI(fpath_UserConfig);
         public MainClass ()
         {
             // Setting Of This
