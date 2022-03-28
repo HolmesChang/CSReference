@@ -1,8 +1,21 @@
 {
     "ModelName": "PA1013A",
     "PartNumber": "FL11283",
+    "fpath_NokiaRegTable": "Nokia.csv",
     "fpath_RegTable": "PA1013A.csv",
     "RegAddrBitWidth": 8,
     "RegParamBitWidth": 8,
-    "RegTable": 
+    "RegAddr": "B0, B1, B2, NewTabPage,
+                B3, B4, B5, NewTabPage,
+                B6, B7, B8, B9, BA, NewTabPage,
+                BB, BC, BD, BE, BF, C0, C6, C7, C8, NewTabPage,
+                CC, E0, NewTabPage,
+                E9, EA, NewTabPage",
+    "FPGARegAddrBitWidth": 16,
+    "FPGARegParamBitWidth": 32,
+    "FPGARegAddr": "",
+    "SSDRegAddrBitWidth": 8,
+    "SSDRegParamBitWidth": 32,
+    "SSDRegAddr": "B0, B1, B2, B3, B4, B5, NewTabPage,
+                   B6, B7, B8, B9, BB, BA, NewTabPage",
 }

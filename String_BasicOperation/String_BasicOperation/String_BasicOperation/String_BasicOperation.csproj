@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{138E8A5C-746E-4570-A6FC-241603B4AF54}</ProjectGuid>
+    <ProjectGuid>{40A5FA06-8512-4D8A-89A5-EDD6C4DF3EB1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GUI_WinForm_SelfDevelopmentComponent_Register</RootNamespace>
-    <AssemblyName>GUI_WinForm_SelfDevelopmentComponent_Register</AssemblyName>
+    <RootNamespace>String_BasicOperation</RootNamespace>
+    <AssemblyName>String_BasicOperation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,22 +37,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API.cs" />
-    <Compile Include="Instrument_Optics.cs" />
-    <Compile Include="MainClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Register_DDI.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Register_FPGA.cs" />
-    <Compile Include="Register_SSD.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
-    <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
+    <Compile Include="MainClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

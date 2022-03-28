@@ -1,0 +1,7 @@
+D:\Publication\HolmesChang\CS Reference\Function\Function\Function\bin\Debug\Function.exe.config
+D:\Publication\HolmesChang\CS Reference\Function\Function\Function\bin\Debug\Function.exe
+D:\Publication\HolmesChang\CS Reference\Function\Function\Function\bin\Debug\Function.pdb
+D:\Publication\HolmesChang\CS Reference\Function\Function\Function\obj\Debug\Function.csprojAssemblyReference.cache
+D:\Publication\HolmesChang\CS Reference\Function\Function\Function\obj\Debug\Function.csproj.CoreCompileInputs.cache
+D:\Publication\HolmesChang\CS Reference\Function\Function\Function\obj\Debug\Function.exe
+D:\Publication\HolmesChang\CS Reference\Function\Function\Function\obj\Debug\Function.pdb

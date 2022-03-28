@@ -15,10 +15,15 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
         {
             // Setting Of This
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            //this.Left = 0;
+            //this.Top = 0;
+            //this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            //this.Height = Screen.PrimaryScreen.WorkingArea.Height;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
-            this.Text = "PA1013";
+            //this.WindowState = FormWindowState.Maximized;
+            this.Text = this.Register_DDI_PA1013.ModelName;
             this.Resize += MainClass_Resize;
 
             // Declaration AND Setting Of Member GUI Component Of This
@@ -30,11 +35,17 @@ namespace GUI_WinForm_SelfDevelopmentComponent_Register
                 Page.Size = new Size(Page.Parent.Size.Width, Page.Parent.Size.Height);
                 Page.ClientSize = new Size(Page.Parent.Size.Width, Page.Parent.Size.Height);
             }
+            foreach (var TlpLayout in this.Register_DDI_PA1013.ListTLPLayout)
+            {
+                TlpLayout.MinimumSize = new Size(TlpLayout.Parent.Size.Width - 30, 0);
+                TlpLayout.AutoSize = true;
+                TlpLayout.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            }
             foreach (var TLP in this.Register_DDI_PA1013.ListTLP)
             {
                 //TLP.Size = new Size(TLP.Parent.Size.Width-30, TLP.Parent.Size.Height-30);
                 //TLP.Width = TLP.Parent.Size.Width - 30;
-                TLP.MinimumSize = new Size(TLP.Parent.Size.Width - 30, 0);
+                //TLP.MinimumSize = new Size(TLP.Parent.Size.Width - 30, 0);
                 TLP.AutoSize = true;
                 TLP.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             }

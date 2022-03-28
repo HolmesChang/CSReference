@@ -1,0 +1,7 @@
+D:\Publication\HolmesChang\CS Reference\String_BasicOperation\String_BasicOperation\String_BasicOperation\bin\Debug\String_BasicOperation.exe.config
+D:\Publication\HolmesChang\CS Reference\String_BasicOperation\String_BasicOperation\String_BasicOperation\bin\Debug\String_BasicOperation.exe
+D:\Publication\HolmesChang\CS Reference\String_BasicOperation\String_BasicOperation\String_BasicOperation\bin\Debug\String_BasicOperation.pdb
+D:\Publication\HolmesChang\CS Reference\String_BasicOperation\String_BasicOperation\String_BasicOperation\obj\Debug\String_BasicOperation.csprojAssemblyReference.cache
+D:\Publication\HolmesChang\CS Reference\String_BasicOperation\String_BasicOperation\String_BasicOperation\obj\Debug\String_BasicOperation.csproj.CoreCompileInputs.cache
+D:\Publication\HolmesChang\CS Reference\String_BasicOperation\String_BasicOperation\String_BasicOperation\obj\Debug\String_BasicOperation.exe
+D:\Publication\HolmesChang\CS Reference\String_BasicOperation\String_BasicOperation\String_BasicOperation\obj\Debug\String_BasicOperation.pdb
